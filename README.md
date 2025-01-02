@@ -47,3 +47,17 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
+
+# Usage
+
+### Change kitty theme
+
+```
+kitten theme
+```
+
+### Change powerlevel10k conf
+
+```
+p10k configure
+```
