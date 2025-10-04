@@ -1,6 +1,6 @@
 # 🛠️ My Dotfiles
 
-This repository contains my personal configuration files (**dotfiles**) for Zsh, Git, Ghostty, and other tools I use on a daily basis.  
+This repository contains my personal configuration files (**dotfiles**) for Zsh, Git, Ghostty, Tmux, and other tools I use on a daily basis.  
 It allows me to quickly set up a consistent development environment on any machine.
 
 ---
@@ -11,6 +11,7 @@ It allows me to quickly set up a consistent development environment on any machi
 - Custom `.zshrc` with aliases and plugins
 - Git configuration (`.gitconfig`)
 - Ghostty terminal configuration
+- **Tmux** configuration (`.tmux.conf`)
 - Easy installation via setup scripts
 
 ---
@@ -56,6 +57,8 @@ It allows me to quickly set up a consistent development environment on any machi
 
    - ~/.dotfiles/git/.gitconfig → ~/.gitconfig
 
+   - ~/.dotfiles/tmux/.tmux.conf → ~/.tmux.conf
+
    - ~/.dotfiles/ghostty/config → ~/.config/ghostty/config
 
 ---
@@ -69,6 +72,8 @@ It allows me to quickly set up a consistent development environment on any machi
 │   └── install_plugins.sh
 ├── git
 │   └── .gitconfig
+├── tmux
+│   └── .tmux.conf
 ├── ghostty
 │   └── config
 ├── install.sh
