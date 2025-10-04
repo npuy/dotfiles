@@ -1,0 +1,8 @@
+[user]
+	email = nicolas.pp333@gmail.com
+	name = Nicolas Pereira
+[pager]
+	branch = false
+[alias]
+	co = checkout
+	br = branch
