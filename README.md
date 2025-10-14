@@ -45,7 +45,21 @@ It allows me to quickly set up a consistent development environment on any machi
 
    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-4. **Create symlinks**
+4. **Install Tmux theme (optional)**
+
+   Run the theme installation script:
+
+   ```bash
+   ./tmux/install_catppuccin.sh
+   ```
+
+   This will install the [Catppuccin](https://github.com/catppuccin/tmux) theme for Tmux in:
+
+   ```bash
+   ~/.config/tmux/plugins/catppuccin
+   ```
+
+5. **Create symlinks**
 
    ```bash
    ./install.sh
@@ -74,6 +88,7 @@ It allows me to quickly set up a consistent development environment on any machi
 │   └── .gitconfig
 ├── tmux
 │   └── .tmux.conf
+│   └── install_catppuccin.sh
 ├── ghostty
 │   └── config
 ├── install.sh
