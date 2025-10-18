@@ -2,7 +2,7 @@
 set -e
 
 TMUX_PLUGIN_DIR="${HOME}/.config/tmux/plugins"
-CATPPUCCIN_DIR="${TMUX_PLUGIN_DIR}/catppuccin"
+CATPPUCCIN_DIR="${TMUX_PLUGIN_DIR}/catppuccin/tmux"
 
 echo "🎨 Installing Catppuccin theme for tmux..."
 
