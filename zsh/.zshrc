@@ -15,6 +15,19 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias cl='clear'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Vi mode
+bindkey -v
+export KEYTIMEOUT=1
+# Change cursor shape for different vi modes:
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] ||
+       [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+         [[ ${KEYMAP} == viins ]] ||
+         [[ ${KEYMAP} = '' ]] ||
+         [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
+}
+zle -N zle-keymap-select
