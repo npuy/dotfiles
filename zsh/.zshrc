@@ -14,3 +14,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias cl='clear'
+
+# fzf Shell integration
+source <(fzf --zsh)
+

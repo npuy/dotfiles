@@ -1,83 +1,84 @@
 # 🛠️ My Dotfiles
 
-This repository contains my personal configuration files (**dotfiles**) for Zsh, Git, Ghostty, Tmux, and other tools I use on a daily basis.  
-It allows me to quickly set up a consistent development environment on any machine.
+This repository contains my personal configuration files (dotfiles) for Zsh, Git, Ghostty, Tmux, and helper scripts to set them up. It lets me quickly configure a consistent development environment on any machine.
 
 ---
 
 ## 🚀 Features
 
-- **Zsh** with [Oh My Zsh](https://ohmyz.sh/)
-- Custom `.zshrc` with aliases and plugins
-- Git configuration (`.gitconfig`)
+- Zsh with Oh My Zsh
+- Custom `.zshrc` with theme, aliases, fzf integration and plugins
+- Git configuration (`.gitconfig`) with user identity and helpful aliases
 - Ghostty terminal configuration
-- **Tmux** configuration (`.tmux.conf`)
-- Easy installation via setup scripts
+- Tmux configuration (`.tmux.conf`) with Catppuccin theme support
+- Setup scripts to install plugins, theme and create symlinks
 
 ---
 
 ## 📦 Installation
 
-1. **Clone this repository**
+1. Clone this repository
 
-   ```bash
-   git clone https://github.com/npuy/dotfiles.git ~/.dotfiles
-   cd ~/.dotfiles
-   ```
+```bash
+git clone https://github.com/npuy/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+```
 
-2. **Install Oh My Zsh**
+2. Install Oh My Zsh (if not already installed)
 
-   ```bash
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   ```
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-3. **Install plugins (optional)**
+3. Install Zsh plugins (optional)
 
-   Run the provided script:
+```bash
+./zsh/install_plugins.sh
+```
 
-   ```bash
-   ./zsh/install_plugins.sh
-   ```
+This script installs into your Oh My Zsh custom plugins directory (defaults to $HOME/.oh-my-zsh/custom/plugins) the following:
 
-   Plugins included:
+- zsh-autosuggestions — https://github.com/zsh-users/zsh-autosuggestions
+- zsh-syntax-highlighting — https://github.com/zsh-users/zsh-syntax-highlighting
 
-   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+4. Install fzf (optional)
 
-   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+fzf provides fuzzy finding for the shell and integrates with the provided `.zshrc`.
 
-4. **Install Tmux theme (optional)**
+- Homebrew (macOS):
 
-   Run the theme installation script:
+```bash
+brew install fzf
+```
 
-   ```bash
-   ./tmux/install_catppuccin.sh
-   ```
+5. Install Tmux Catppuccin theme (optional)
 
-   This will install the [Catppuccin](https://github.com/catppuccin/tmux) theme for Tmux in:
+```bash
+./tmux/install_catppuccin.sh
+```
 
-   ```bash
-   ~/.config/tmux/plugins/catppuccin
-   ```
+This script clones the Catppuccin tmux theme to:
 
-5. **Create symlinks**
+```bash
+~/.config/tmux/plugins/catppuccin/tmux
+```
 
-   ```bash
-   ./install.sh
-   ```
+6. Create symlinks
 
-   This will link configuration files to your home directory, e.g.:
+```bash
+./install.sh
+```
 
-   - ~/.dotfiles/zsh/.zshrc → ~/.zshrc
+This will create symlinks from the repository into your home directory:
 
-   - ~/.dotfiles/git/.gitconfig → ~/.gitconfig
-
-   - ~/.dotfiles/tmux/.tmux.conf → ~/.tmux.conf
-
-   - ~/.dotfiles/ghostty/config → ~/.config/ghostty/config
+- ~/.dotfiles/zsh/.zshrc → ~/.zshrc
+- ~/.dotfiles/git/.gitconfig → ~/.gitconfig
+- ~/.dotfiles/tmux/.tmux.conf → ~/.tmux.conf
+- ~/.dotfiles/ghostty/config → ~/.config/ghostty/config
 
 ---
 
-## 📂 Structure
+## 📂 Repository structure
 
 ```
 .dotfiles
@@ -87,7 +88,7 @@ It allows me to quickly set up a consistent development environment on any machi
 ├── git
 │   └── .gitconfig
 ├── tmux
-│   └── .tmux.conf
+│   ├── .tmux.conf
 │   └── install_catppuccin.sh
 ├── ghostty
 │   └── config
