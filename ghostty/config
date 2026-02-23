@@ -1,3 +1,11 @@
 theme = TokyoNight
 font-size = 20
 window-decoration = none
+
+# Desactivar navegación de pestañas por defecto
+keybind = cmd+shift+left_bracket=ignore
+keybind = cmd+shift+right_bracket=ignore
+
+# Enviar Meta-p y Meta-n a tmux
+keybind = cmd+shift+left_bracket=text:\x1bp
+keybind = cmd+shift+right_bracket=text:\x1bn
