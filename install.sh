@@ -3,6 +3,13 @@ set -e
 
 DOTFILES_DIR="$HOME/.dotfiles"
 
+# Homebrew packages
+read -r -p "Install Homebrew packages from Brewfile? [y/N] " response
+if [[ "$response" =~ ^[Yy]$ ]]; then
+  echo "🍺 Installing Homebrew packages..."
+  brew bundle --file="$DOTFILES_DIR/brew/Brewfile"
+fi
+
 echo "🔗 Creating symlinks for dotfiles..."
 
 # Zsh

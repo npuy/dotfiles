@@ -1,0 +1,53 @@
+# Command-line tools ----------------------------------------------------------
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Terminal multiplexer
+brew "tmux"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+
+# Programming and development tools -------------------------------------------
+# Open-source code editor TODO
+cask "visual-studio-code"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Collaboration platform for API development
+cask "postman"
+# Terminal-based AI coding assistant
+cask "claude-code"
+
+# MacOS utilities -------------------------------------------------------------
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Control your tools with a few keystrokes TODO
+cask "raycast"
+
+# Apps ------------------------------------------------------------------------
+# Web browser TODO
+cask "google-chrome"
+# Client for the Google Drive storage service
+cask "google-drive"
+# Multimedia player
+cask "vlc"
+# Password manager app
+cask "keepassxc"
+# E-books management software
+cask "calibre"
+# Free and open-source image editor
+cask "gimp"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Voice and text chat software
+cask "discord"
+# Video communication and virtual meeting platform
+cask "zoom"
+
+# Periferals apps -------------------------------------------------------------
+# Software for Logitech devices
+cask "logi-options+"

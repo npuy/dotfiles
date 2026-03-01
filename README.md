@@ -24,13 +24,26 @@ git clone https://github.com/npuy/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-2. Install Oh My Zsh (if not already installed)
+2. Install Homebrew packages (optional)
+
+```bash
+brew bundle --file=~/.dotfiles/brew/Brewfile
+```
+
+This installs all tools and applications defined in the Brewfile, including:
+
+- CLI tools: `fzf`, `tmux`, `cloudflared`
+- Dev tools: VS Code, Ghostty, DBeaver, Docker Desktop, Postman, Claude Code
+- macOS utilities: MonitorControl, Raycast
+- Apps: Chrome, VLC, KeePassXC, Obsidian, Discord, Zoom, and more
+
+3. Install Oh My Zsh (if not already installed)
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-3. Install Zsh plugins (optional)
+4. Install Zsh plugins (optional)
 
 ```bash
 ./zsh/install_plugins.sh
@@ -40,16 +53,6 @@ This script installs into your Oh My Zsh custom plugins directory (defaults to $
 
 - zsh-autosuggestions — https://github.com/zsh-users/zsh-autosuggestions
 - zsh-syntax-highlighting — https://github.com/zsh-users/zsh-syntax-highlighting
-
-4. Install fzf (optional)
-
-fzf provides fuzzy finding for the shell and integrates with the provided `.zshrc`.
-
-- Homebrew (macOS):
-
-```bash
-brew install fzf
-```
 
 5. Install Tmux Catppuccin theme (optional)
 
@@ -69,7 +72,7 @@ This script clones the Catppuccin tmux theme to:
 ./install.sh
 ```
 
-This will create symlinks from the repository into your home directory:
+This will optionally install Homebrew packages and create symlinks from the repository into your home directory:
 
 - ~/.dotfiles/zsh/.zshrc → ~/.zshrc
 - ~/.dotfiles/git/.gitconfig → ~/.gitconfig
@@ -82,6 +85,8 @@ This will create symlinks from the repository into your home directory:
 
 ```
 .dotfiles
+├── brew
+│   └── Brewfile
 ├── zsh
 │   ├── .zshrc
 │   └── install_plugins.sh
