@@ -54,17 +54,13 @@ This script installs into your Oh My Zsh custom plugins directory (defaults to $
 - zsh-autosuggestions — https://github.com/zsh-users/zsh-autosuggestions
 - zsh-syntax-highlighting — https://github.com/zsh-users/zsh-syntax-highlighting
 
-5. Install Tmux Catppuccin theme (optional)
+5. Install TPM (Tmux Plugin Manager)
 
 ```bash
-./tmux/install_catppuccin.sh
+./tmux/install_tpm.sh
 ```
 
-This script clones the Catppuccin tmux theme to:
-
-```bash
-~/.config/tmux/plugins/catppuccin/tmux
-```
+This script clones TPM to `~/.tmux/plugins/tpm`. Once installed, open a tmux session and press `prefix + I` (Ctrl+Space + I) to install plugins (including the Catppuccin theme).
 
 6. Create symlinks
 
@@ -94,7 +90,7 @@ This will optionally install Homebrew packages and create symlinks from the repo
 │   └── .gitconfig
 ├── tmux
 │   ├── .tmux.conf
-│   └── install_catppuccin.sh
+│   └── install_tpm.sh
 ├── ghostty
 │   └── config
 ├── install.sh
