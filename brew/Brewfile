@@ -19,6 +19,8 @@ cask "docker-desktop"
 cask "postman"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
 
 # MacOS utilities -------------------------------------------------------------
 # Tool to control external monitor brightness & volume
